@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color:brown;
+        }
+        body{
+            background-color: darkkhaki;
+        }
+        ul{
+            text-align: center;
+            
+            background-color:brown;
+            width: 200px;
+        }
+        li{
+            border-left: 1px solid #bbb;
+        }
+        p{
+            text-align: center;
+            font-size: large;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Largest Number</h1>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="largestOf3.html">Largest of 3 numbers</a>
+          </li>
+        </ul>
+    </nav>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="largestOf2.html">Largest of 2 numbers</a>
+            </li>
+          </ul>
+    </nav>
+
+    <div class="container">
+        <p><strong>Enter any two integers and click on the button to see which number is the largest.</strong></p>
+        <br><br><br>
+        <div class="row">
+            <div class="col col-12 col-sm-3">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </div>
+            <div class="col col-12 col-sm-6">
+                <form action="">
+                    <table class="table">
+                        <tr>
+                            <td><strong>Number 1</strong></td>
+                            <td><input type="text" class="form-control" id="num1"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Number 2</strong></td>
+                            <td><input type="text" class="form-control" id="num2"></td>
+                        </tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-primary" onclick="largestOfTwo();"><strong>Find the largest</strong></button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col col-12 col-sm-3">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function largestOfTwo()
+        {
+            var a=parseFloat(document.getElementById("num1").value);
+            var b=parseFloat(document.getElementById("num2").value);
+
+            if(a>b)
+            {
+                document.getElementById("result").innerHTML=a+" is the largest";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML=b+" is the largest";
+            }
+        }
+    </script>
+</body>
+</html>
